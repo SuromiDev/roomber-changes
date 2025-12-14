@@ -491,7 +491,6 @@ loaded(function () {
             msg: {
                 author: session.user,
                 message: $("#message").val(),
-                timestamp: new Date().getTime(),
                 channel: channel,
                 ...attachmentObject
             }

@@ -10,6 +10,7 @@ module.exports = require('express').Router({ mergeParams: true })
             res.send({ error: "Your message is past the limit of " + characterLimits["message"][1] + " characters." });
             return;
         }
+        msg.timestamp = new Date().getTime();
         msg.flagged = false;
         msg.removed = false;
         if (filterMessage(msg.message)) msg.flagged = true;
